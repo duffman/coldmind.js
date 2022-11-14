@@ -1,0 +1,51 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"baseUrl":                "./",
+		"outDir":                 "./lib",
+		"rootDir":                "./src",
+		"module":                 "CommonJS",
+		"moduleResolution":       "node",
+		"esModuleInterop":        true,
+		"noImplicitAny":          false,
+		"removeComments":         true,
+		"preserveConstEnums":     true,
+		"strict":                 false,
+		"pretty":                 false,
+
+		/*
+		"typeRoots": [
+			"./src/typings/",
+			"./typings/",
+			"./node_modules/@types"
+		],
+		*/
+
+		"target":                 "es6",
+		"sourceMap":              false,
+		"emitDecoratorMetadata":  true,
+		"skipLibCheck":           true,
+		"paths":                  {
+			"@root/*":         [
+				"./*"
+			],
+			"@templates/*":  [
+				"./assets/templates/*"
+			]
+		}
+	},
+	"ts-node":         {
+		"require": [
+			"tsconfig-paths/register"
+		]
+	},
+	"exclude":         [
+		"node_modules",
+		"bin",
+		"templates"
+
+	],
+	"include":         [
+		"src/**/*"
+	]
+}
